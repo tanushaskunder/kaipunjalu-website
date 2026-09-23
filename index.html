@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kaipunjalu Fishermen's Co-operative Society</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #063b5c;
+
+            min-height: 74px;
+
+            padding: 10px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .brand img {
+            width: 50px;
+
+            height: 50px;
+
+            object-fit: contain;
+        }
+
+
+        .brand h2 {
+            color: white;
+
+            font-size: 18px;
+
+            margin: 0;
+
+            white-space: nowrap;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .nav-links a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 570px;
+
+            background:
+            linear-gradient(
+                rgba(6, 59, 92, 0.72),
+                rgba(6, 59, 92, 0.72)
+            ),
+            url("images/head-office.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            padding: 40px 20px;
+        }
+
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+
+        .hero img {
+            width: 110px;
+
+            height: 110px;
+
+            object-fit: contain;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 {
+            font-size: 43px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero p {
+            font-size: 19px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            background-color: #ffd166;
+
+            color: #063b5c;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        .btn:hover {
+            background-color: white;
+        }
+
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        .container {
+            width: 88%;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 65px 0;
+        }
+
+
+        .title {
+            text-align: center;
+
+            color: #063b5c;
+
+            font-size: 30px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+
+        .about img {
+            width: 100%;
+
+            height: 330px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.15);
+        }
+
+
+        .about-text p {
+            line-height: 1.8;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           STATISTICS
+        ========================= */
+
+        .stats-section {
+            background-color: #e8f3f8;
+        }
+
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+            repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .stat {
+            background-color: white;
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.08);
+        }
+
+
+        .stat h2 {
+            color: #087ea4;
+
+            font-size: 28px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .stat p {
+            color: #555;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .service {
+            background-color: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .service:hover {
+            transform: translateY(-7px);
+        }
+
+
+        .service .icon {
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .service h3 {
+            color: #063b5c;
+
+            margin-bottom: 10px;
+        }
+
+
+        .service p {
+            line-height: 1.6;
+
+            color: #555;
+        }
+
+
+        /* =========================
+           ACHIEVEMENT
+        ========================= */
+
+        .achievement {
+            background-color: #063b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 55px 20px;
+        }
+
+
+        .award-image {
+            width: 180px;
+
+            height: 140px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.20);
+        }
+
+
+        .achievement h2 {
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .achievement p {
+            max-width: 750px;
+
+            margin: auto;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .gallery img {
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            transition: 0.3s;
+        }
+
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #042c45;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+
+        footer p {
+            margin: 7px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+
+            .nav-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+
+            .stats {
+                grid-template-columns:
+                repeat(2, 1fr);
+            }
+
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+
+            .brand h2 {
+                font-size: 17px;
+            }
+
+
+            .nav-links {
+                gap: 10px;
+            }
+
+
+            .nav-links a {
+                margin: 4px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="brand">
+
+            <img
+                src="images/logo.png"
+                alt="Kaipunjalu Society Logo"
+            >
+
+            <h2>
+                KAIPUNJALU CO-OP
+            </h2>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="progress.html">
+                Progress
+            </a>
+
+            <a href="social.html">
+                Social Work
+            </a>
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+            <a href="management.html">
+                Management
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <img
+                src="images/logo.png"
+                alt="Society Logo"
+            >
+
+
+            <h1>
+
+                Kaipunjalu Fishermen's
+                Primary Multi-Purpose
+                Co-operative Society Ltd.
+
+            </h1>
+
+
+            <p>
+
+                Serving fishermen, members and the
+                community with trust, cooperation
+                and commitment.
+
+            </p>
+
+
+            <a
+                href="about.html"
+                class="btn"
+            >
+
+                Discover More
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="container">
+
+        <h2 class="title">
+            About Our Society
+        </h2>
+
+
+        <div class="about">
+
+
+            <img
+                src="images/office-now.jpg"
+                alt="Kaipunjalu Society Office"
+            >
+
+
+            <div class="about-text">
+
+                <p>
+
+                    Kaipunjalu Fishermen's Primary
+                    Multi-Purpose Co-operative Society
+                    Ltd. works for the economic and
+                    social development of its members
+                    and the fishing community.
+
+                </p>
+
+
+                <p>
+
+                    The society provides financial,
+                    insurance and welfare services while
+                    supporting education and community
+                    development.
+
+                </p>
+
+
+                <a
+                    href="about.html"
+                    class="btn"
+                >
+
+                    Read More
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATISTICS
+    ========================= -->
+
+    <section class="stats-section">
+
+        <div class="container">
+
+            <h2 class="title">
+                Society at a Glance
+            </h2>
+
+
+            <div class="stats">
+
+
+                <div class="stat">
+
+                    <h2>
+                        2504
+                    </h2>
+
+                    <p>
+                        Total Members
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h2>
+                        ₹1.08 Cr
+                    </h2>
+
+                    <p>
+                        Share Capital
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h2>
+                        ₹52 Cr
+                    </h2>
+
+                    <p>
+                        Working Capital
+                    </p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h2>
+                        ₹214.69 Cr
+                    </h2>
+
+                    <p>
+                        Yearly Transaction
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <section class="container">
+
+        <h2 class="title">
+            Our Services
+        </h2>
+
+
+        <div class="services">
+
+
+            <div class="service">
+
+                <div class="icon">
+                    💰
+                </div>
+
+                <h3>
+                    Deposits
+                </h3>
+
+                <p>
+                    Deposit-related financial
+                    services for members.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">
+                    🏦
+                </div>
+
+                <h3>
+                    Loans
+                </h3>
+
+                <p>
+                    Financial support through
+                    loan services.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Insurance
+                </h3>
+
+                <p>
+                    Life, health and vehicle
+                    insurance services.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACHIEVEMENT
+    ========================= -->
+
+    <section class="achievement">
+
+
+        <img
+            src="images/trophies.jpg"
+            alt="Awards and Recognition"
+            class="award-image"
+        >
+
+
+        <h2>
+            🏆 Awards & Recognition
+        </h2>
+
+
+        <p>
+
+            The society has received recognition
+            at state and district levels and has
+            also received the Best Co-operative
+            Society Award from S.D.C.C Bank.
+
+        </p>
+
+
+        <a
+            href="achievements.html"
+            class="btn"
+        >
+
+            View Achievements
+
+        </a>
+
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <section class="container">
+
+        <h2 class="title">
+            From Our Gallery
+        </h2>
+
+
+        <div class="gallery">
+
+
+            <img
+                src="images/head-office.jpg"
+                alt="Society Office"
+            >
+
+
+            <img
+                src="images/centenary-event.jpg"
+                alt="Centenary Celebration"
+            >
+
+
+            <img
+                src="images/mattu-branch.jpg"
+                alt="Mattu Branch"
+            >
+
+
+            <img
+                src="images/district-award.jpg"
+                alt="District Award"
+            >
+
+
+            <img
+                src="images/education-support.jpg"
+                alt="Community Activity"
+            >
+
+
+            <img
+                src="images/centenary-event.jpg"
+                alt="Society Celebration"
+            >
+
+
+        </div>
+
+
+        <div style="text-align:center; margin-top:30px;">
+
+            <a
+                href="gallery.html"
+                class="btn"
+            >
+
+                View Full Gallery
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Kaipunjalu Fishermen's
+            Primary Multi-Purpose Co-operative Society Ltd.
+
+        </p>
+
+
+        <p>
+
+            Mogaveera Sankeerna, Kaipunjalu,
+            Uliyaragoli Village, Kaup Taluk,
+            Udupi District, Karnataka - 574106
+
+        </p>
+
+
+        <p>
+
+            📞 0820-2551631
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

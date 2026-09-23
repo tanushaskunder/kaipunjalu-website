@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Achievements - Kaipunjalu Co-operative Society</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #063b5c;
+            min-height: 74px;
+            padding: 10px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .brand img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+
+        .brand h2 {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background:
+            linear-gradient(
+                rgba(6, 59, 92, 0.82),
+                rgba(6, 59, 92, 0.82)
+            ),
+            url("images/society.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 90px 20px;
+
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+
+        .header p {
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+
+        /* =========================
+           ACHIEVEMENT CARD
+        ========================= */
+
+        .achievement {
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.10);
+
+            max-width: 850px;
+
+            margin: auto;
+
+            transition: 0.3s;
+        }
+
+
+        .achievement:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 18px rgba(0,0,0,0.15);
+        }
+
+
+        .award-image {
+            width: 100%;
+            max-width: 650px;
+
+            height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .achievement h2 {
+            color: #063b5c;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .achievement p {
+            color: #555;
+
+            line-height: 1.8;
+
+            font-size: 16px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn {
+            display: inline-block;
+
+            background-color: #063b5c;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            transition: 0.3s;
+        }
+
+
+        .btn:hover {
+            background-color: #087ea4;
+        }
+
+
+        /* =========================
+           EXTRA ACHIEVEMENT INFO
+        ========================= */
+
+        .recognition {
+            margin-top: 35px;
+
+            display: grid;
+
+            grid-template-columns:
+            repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .recognition-box {
+            background-color: #e8f3f8;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+
+        .recognition-box h3 {
+            color: #063b5c;
+
+            margin-bottom: 10px;
+        }
+
+
+        .recognition-box p {
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #063b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 50px;
+        }
+
+
+        footer p {
+            margin: 6px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+
+            .nav-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+
+            .nav-links {
+                gap: 10px;
+            }
+
+
+            .nav-links a {
+                margin: 4px;
+            }
+
+
+            .container {
+                width: 92%;
+            }
+
+
+            .achievement {
+                padding: 25px;
+            }
+
+
+            .award-image {
+                height: 220px;
+            }
+
+
+            .recognition {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+
+        <div class="brand">
+
+            <img
+                src="images/logo.png"
+                alt="Kaipunjalu Society Logo"
+            >
+
+            <h2>
+                KAIPUNJALU CO-OP
+            </h2>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="progress.html">
+                Progress
+            </a>
+
+            <a href="social.html">
+                Social Work
+            </a>
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+            <a href="management.html">
+                Management
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <div class="header">
+
+        <h1>
+            Achievements
+        </h1>
+
+        <p>
+            Recognition for our service and contribution
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <div class="container">
+
+
+        <!-- AWARDS -->
+
+        <section class="achievement">
+
+
+            <img
+                src="images/trophies.jpg"
+                alt="Awards and Recognition"
+                class="award-image"
+            >
+
+
+            <h2>
+                🏆 Awards & Recognition
+            </h2>
+
+
+            <p>
+
+                The society has received recognition
+                at state and district levels and has
+                also received the Best Co-operative
+                Society Award from S.D.C.C Bank.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- RECOGNITION INFORMATION -->
+
+        <div class="recognition">
+
+
+            <div class="recognition-box">
+
+                <h3>
+                    🏆 State & District Recognition
+                </h3>
+
+                <p>
+
+                    The society has received recognition
+                    for its service and contribution at
+                    state and district levels.
+
+                </p>
+
+            </div>
+
+
+            <div class="recognition-box">
+
+                <h3>
+                    🌟 Best Co-operative Society
+                </h3>
+
+                <p>
+
+                    The society has received the
+                    Best Co-operative Society Award
+                    from S.D.C.C Bank.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Kaipunjalu Fishermen's
+            Primary Multi-Purpose Co-operative Society Ltd.
+
+        </p>
+
+
+        <p>
+
+            Serving the community with trust since 1920.
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

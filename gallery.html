@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery - Kaipunjalu Co-operative Society</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #063b5c;
+
+            min-height: 74px;
+
+            padding: 10px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .brand img {
+            width: 50px;
+
+            height: 50px;
+
+            object-fit: contain;
+        }
+
+
+        .brand h2 {
+            color: white;
+
+            font-size: 18px;
+
+            margin: 0;
+
+            white-space: nowrap;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .nav-links a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background:
+            linear-gradient(
+                rgba(6, 59, 92, 0.82),
+                rgba(6, 59, 92, 0.82)
+            ),
+            url("images/office.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            padding: 90px 20px;
+
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .header h1 {
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .header p {
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           GALLERY CONTAINER
+        ========================= */
+
+        .container {
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 50px auto;
+        }
+
+
+        .title {
+            text-align: center;
+
+            color: #063b5c;
+
+            font-size: 30px;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           GALLERY GRID
+        ========================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+            repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+           PHOTO CARD
+        ========================= */
+
+        .photo {
+            background-color: white;
+
+            padding: 10px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.10);
+
+            transition: 0.3s;
+
+            overflow: hidden;
+        }
+
+
+        .photo:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 8px 18px rgba(0,0,0,0.15);
+        }
+
+
+        .photo img {
+            width: 100%;
+
+            height: 230px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            display: block;
+        }
+
+
+        .photo h3 {
+            text-align: center;
+
+            color: #063b5c;
+
+            padding: 14px 5px 8px;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #063b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 50px;
+        }
+
+
+        footer p {
+            margin: 6px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+
+            .nav-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+
+            .nav-links {
+                gap: 10px;
+            }
+
+
+            .nav-links a {
+                margin: 4px;
+            }
+
+
+            .container {
+                width: 92%;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            .photo img {
+                height: 220px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+
+        <div class="brand">
+
+            <img
+                src="images/logo.png"
+                alt="Kaipunjalu Society Logo"
+            >
+
+
+            <h2>
+                KAIPUNJALU CO-OP
+            </h2>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a href="progress.html">
+                Progress
+            </a>
+
+
+            <a href="social.html">
+                Social Work
+            </a>
+
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+
+            <a href="management.html">
+                Management
+            </a>
+
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
+
+    <div class="header">
+
+        <h1>
+            Photo Gallery
+        </h1>
+
+
+        <p>
+            Glimpses of our society, activities and achievements
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <div class="container">
+
+
+        <h2 class="title">
+            Our Memories
+        </h2>
+
+
+        <div class="gallery">
+
+
+            <!-- SOCIETY OFFICE -->
+
+            <div class="photo">
+
+                <img
+                    src="images/head-office.jpg"
+                    alt="Society Office"
+                >
+
+                <h3>
+                    Society Office
+                </h3>
+
+            </div>
+
+
+            <!-- SOCIETY BRANCH -->
+
+            <div class="photo">
+
+                <img
+                    src="images/branch.jpg"
+                    alt="Society Branch"
+                >
+
+                <h3>
+                    Society Branch
+                </h3>
+
+            </div>
+
+
+            <!-- CENTENARY CELEBRATION -->
+
+            <div class="photo">
+
+                <img
+                    src="images/centenary-event.jpg"
+                    alt="Centenary Celebration"
+                >
+
+                <h3>
+                    Centenary Celebration
+                </h3>
+
+            </div>
+
+
+            <!-- AWARDS -->
+
+            <div class="photo">
+
+                <img
+                    src="images/trophies.jpg"
+                    alt="Awards and Recognition"
+                >
+
+                <h3>
+                    Awards & Recognition
+                </h3>
+
+            </div>
+
+
+            <!-- COMMUNITY SERVICE -->
+
+            <div class="photo">
+
+                <img
+                    src="images/education-support.jpg"
+                    alt="Education Support"
+                >
+
+                <h3>
+                    Community Service
+                </h3>
+
+            </div>
+
+
+            <!-- SOCIETY CELEBRATION -->
+
+            
+<div class="photo">
+
+    <img
+        src="images/state-award-2020.PNG"
+        alt="State Level Best Fisheries Co-operative Society Award 2020-2021"
+    >
+
+    <h3>
+        🏆 State Level Best Fisheries Co-operative Society Award – 2020-2021
+    </h3>
+
+</div>
+<div class="photo">
+
+    <img
+        src="images/district-award-2020.jpg"
+        alt="District Level Best Co-operative Society Award 2020-2021"
+    >
+
+    <h3>
+        🏆 District Level Best Co-operative Society Award – 2020-2021
+    </h3>
+
+</div>
+<div class="photo">
+
+    <img
+        src="images/covid-support.jpg"
+        alt="Kaipunjalu Society support during Coronavirus pandemic"
+    >
+
+    <h3>
+        ❤️ Support During Coronavirus Pandemic
+    </h3>
+
+</div>
+<div class="photo">
+
+    <img
+        src="images/pratibha-award.jpg"
+        alt="Prathibha Puraskar Award"
+    >
+
+    <h3>
+        🎓 Prathibha Puraskar Award
+    </h3>
+
+</div>
+<div class="photo">
+
+    <img
+        src="images/flood-relief.jpg"
+        alt="Assistance provided during natural disasters"
+    >
+
+    <h3>
+        🤝 Assistance During Natural Disasters
+    </h3>
+
+</div>
+<div class="photo">
+
+    <img
+        src="images/solar-initiative.jpg"
+        alt="Solar Power Unit"
+    >
+
+    <h3>
+        Solar Power Unit
+    </h3>
+
+</div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kaipunjalu Fishermen's
+            Primary Multi-Purpose Co-operative Society Ltd.
+        </p>
+
+
+        <p>
+            Serving the community with trust since 1920.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

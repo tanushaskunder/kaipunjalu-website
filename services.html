@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services - Kaipunjalu Co-operative Society</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #063b5c;
+            min-height: 74px;
+            padding: 10px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .brand h2 {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background:
+            linear-gradient(
+                rgba(6, 59, 92, 0.82),
+                rgba(6, 59, 92, 0.82)
+            ),
+            url("images/society.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 90px 20px;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .title {
+            text-align: center;
+            color: #063b5c;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            text-align: center;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.10);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 8px 18px rgba(0,0,0,0.15);
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h2 {
+            color: #063b5c;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+
+        /* =========================
+           WELFARE
+        ========================= */
+
+        .welfare {
+            background-color: #e8f3f8;
+
+            margin-top: 50px;
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+        .welfare h2 {
+            color: #063b5c;
+            margin-bottom: 15px;
+        }
+
+        .welfare p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #063b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 6px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                margin: 4px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="brand">
+
+            <img
+                src="images/logo.png"
+                alt="Kaipunjalu Society Logo"
+            >
+
+            <h2>
+                KAIPUNJALU CO-OP
+            </h2>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="progress.html">
+                Progress
+            </a>
+
+            <a href="social.html">
+                Social Work
+            </a>
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+            <a href="management.html">
+                Management
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <div class="header">
+
+        <h1>
+            Our Services
+        </h1>
+
+        <p>
+            Services designed for our members and community
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         SERVICES
+    ========================= -->
+
+    <div class="container">
+
+        <h2 class="title">
+            What We Provide
+        </h2>
+
+
+        <div class="services">
+
+
+            <!-- Deposits -->
+
+            <div class="service-card">
+
+                <div class="icon">
+                    💰
+                </div>
+
+                <h2>
+                    Deposits
+                </h2>
+
+                <p>
+
+                    We provide information and services
+                    related to deposits for our members
+                    and customers.
+
+                </p>
+
+            </div>
+
+
+            <!-- Loans -->
+
+            <div class="service-card">
+
+                <div class="icon">
+                    🏦
+                </div>
+
+                <h2>
+                    Loans
+                </h2>
+
+                <p>
+
+                    Loan-related services are provided
+                    to meet the financial needs of
+                    members and customers.
+
+                </p>
+
+            </div>
+
+
+            <!-- SMS -->
+
+            <div class="service-card">
+
+                <div class="icon">
+                    📱
+                </div>
+
+                <h2>
+                    SMS Alerts
+                </h2>
+
+                <p>
+
+                    SMS alerts provide quick and timely
+                    communication with members and
+                    customers.
+
+                </p>
+
+            </div>
+
+
+            <!-- Life Insurance -->
+
+            <div class="service-card">
+
+                <div class="icon">
+                    🛡️
+                </div>
+
+                <h2>
+                    Life Insurance
+                </h2>
+
+                <p>
+
+                    LIC Micro Insurance Policies are
+                    made available to members through
+                    the society's branches.
+
+                </p>
+
+            </div>
+
+
+            <!-- Health Insurance -->
+
+            <div class="service-card">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h2>
+                    Health Insurance
+                </h2>
+
+                <p>
+
+                    Health insurance services are offered
+                    in collaboration with Star Health
+                    and Allied Insurance.
+
+                </p>
+
+            </div>
+
+
+            <!-- Vehicle Insurance -->
+
+            <div class="service-card">
+
+                <div class="icon">
+                    🚗
+                </div>
+
+                <h2>
+                    Vehicle Insurance
+                </h2>
+
+                <p>
+
+                    Insurance benefits are provided
+                    to help protect the assets and
+                    vehicles of fishermen members.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             MEMBER WELFARE
+        ========================= -->
+
+        <div class="welfare">
+
+            <h2>
+                ❤️ Member Welfare
+            </h2>
+
+            <p>
+
+                The society also provides support
+                through the Death Relief Fund Scheme
+                and medical assistance for economically
+                weaker members.
+
+                <br><br>
+
+                Members are also provided with
+                Manipal Arogya Cards to access
+                medical services and discounts at
+                partner hospitals.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kaipunjalu Fishermen's
+            Primary Multi-Purpose Co-operative Society Ltd.
+        </p>
+
+        <p>
+            Serving the community with trust since 1920.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

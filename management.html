@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Management Team - Kaipunjalu Co-operative Society</title>
+
+    <style>
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #063b5c;
+
+            min-height: 74px;
+
+            padding: 10px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .brand img {
+            width: 50px;
+
+            height: 50px;
+
+            object-fit: contain;
+        }
+
+        .brand h2 {
+            color: white;
+
+            font-size: 18px;
+
+            margin: 0;
+
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .page-header {
+            background:
+            linear-gradient(
+                rgba(6, 59, 92, 0.82),
+                rgba(6, 59, 92, 0.82)
+            ),
+            url("images/head-office.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            text-align: center;
+
+            color: white;
+
+            padding: 90px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           MANAGEMENT CONTAINER
+        ========================= */
+
+        .container {
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 60px 0;
+        }
+
+        .title {
+            text-align: center;
+
+            color: #063b5c;
+
+            font-size: 32px;
+
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            max-width: 750px;
+
+            margin: 0 auto 40px;
+
+            text-align: center;
+
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+
+        /* =========================
+           MANAGEMENT GRID
+        ========================= */
+
+        .staff-grid {
+            display: grid;
+
+            grid-template-columns:
+            repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+           STAFF CARD
+        ========================= */
+
+        .staff-card {
+            background-color: white;
+
+            border-radius: 14px;
+
+            padding: 18px;
+
+            text-align: center;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 10px 22px rgba(0, 0, 0, 0.15);
+        }
+
+        .staff-card img {
+            width: 150px;
+
+            height: 170px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            margin-bottom: 15px;
+        }
+
+        .staff-card h3 {
+            color: #063b5c;
+
+            font-size: 16px;
+
+            line-height: 1.4;
+
+            margin-bottom: 7px;
+        }
+
+        .staff-card p {
+            color: #087ea4;
+
+            font-weight: bold;
+
+            font-size: 14px;
+        }
+
+
+        /* PRESIDENT */
+
+        .staff-card.president {
+            border-top: 5px solid #063b5c;
+        }
+
+
+        /* =========================
+           STAFF PHOTO SECTION
+        ========================= */
+
+        .staff-photo-section {
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 0 auto 60px;
+
+            text-align: center;
+        }
+
+        .staff-photo-section h2 {
+            color: #063b5c;
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+        .staff-photo-section p {
+            color: #666;
+
+            margin-bottom: 25px;
+
+            line-height: 1.6;
+        }
+
+        .staff-group-photo {
+            width: 100%;
+
+            max-width: 900px;
+
+            height: auto;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #063b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 6px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .staff-grid {
+                grid-template-columns:
+                repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .staff-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                margin: 4px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .staff-card img {
+                width: 140px;
+
+                height: 160px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="brand">
+
+            <img
+                src="images/logo.png"
+                alt="Kaipunjalu Society Logo"
+            >
+
+            <h2>
+                KAIPUNJALU CO-OP
+            </h2>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="progress.html">Progress</a>
+
+            <a href="social.html">Social Work</a>
+
+            <a href="achievements.html">Achievements</a>
+
+            <a href="management.html">Management</a>
+
+            <a href="gallery.html">Gallery</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
+
+    <section class="page-header">
+
+        <h1>
+            Management Team
+        </h1>
+
+        <p>
+            Meet the President, Vice President
+            and Directors of our society
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         MANAGEMENT TEAM
+    ========================= -->
+
+    <section class="container">
+
+        <h2 class="title">
+            Our Management Team
+        </h2>
+
+
+        <p class="intro">
+
+            The society is guided by an experienced
+            management team committed to the growth
+            and development of the society and its members.
+
+        </p>
+
+
+        <div class="staff-grid">
+
+
+            <!-- PRESIDENT -->
+
+            <div class="staff-card president">
+
+                <img
+                    src="images/president.jpg"
+                    alt="Sri. Giriraj. R Kidiyoor"
+                >
+
+                <h3>
+                    Sri. Giriraj. R Kidiyoor
+                </h3>
+
+                <p>
+                    President
+                </p>
+
+            </div>
+
+
+            <!-- VICE PRESIDENT -->
+
+            <div class="staff-card">
+
+                <img
+                    src="images/vice-president.jpg"
+                    alt="Smt. Sharada Suvarna"
+                >
+
+                <h3>
+                    Smt. Sharada Suvarna
+                </h3>
+
+                <p>
+                    Vice President
+                </p>
+
+            </div>
+
+
+            <!-- DIRECTOR 1 -->
+
+            <div class="staff-card">
+
+                <img
+                    src="images/chandra director.jpg"
+                    alt="Sri. Chandraheshekar. R Kundar"
+                >
+
+                <h3>
+                    Sri. Chandraheshekar. R Kundar
+                </h3>
+
+                <p>
+                    Director
+                </p>
+
+            </div>
+
+
+            <!-- DIRECTOR 2 -->
+
+            <div class="staff-card">
+
+                <img
+                    src="images/puspadirector.jpg"
+                    alt="Smt. Pushpalatha. R Kotian"
+                >
+
+                <h3>
+                    Smt. Pushpalatha. R Kotian
+                </h3>
+
+                <p>
+                    Director
+                </p>
+
+            </div>
+
+
+            <!-- DIRECTOR 3 -->
+
+            <div class="staff-card">
+
+                <img
+                    src="images/kaladirector.jpg"
+                    alt="Smt. Kalavathi.J Shriyan"
+                >
+
+                <h3>
+                    Smt. Kalavathi.J Shriyan
+                </h3>
+
+                <p>
+                    Director
+                </p>
+
+            </div>
+
+
+            <!-- DIRECTOR 4 -->
+
+            <div class="staff-card">
+
+                <img
+                    src="images/shobhadir.jpg"
+                    alt="Smt. Shobha.S Shriyan"
+                >
+
+                <h3>
+                    Smt. Shobha.S Shriyan
+                </h3>
+
+                <p>
+                    Director
+                </p>
+
+            </div>
+
+
+            <!-- DIRECTOR 5 -->
+
+            <div class="staff-card">
+
+                <img
+                    src="images/nageshdirector.jpg"
+                    alt="Smt. Nagesh Shriyan"
+                >
+
+                <h3>
+                    Smt. Nagesh Shriyan
+                </h3>
+
+                <p>
+                    Director
+                </p>
+
+            </div>
+
+
+            <!-- DIRECTOR 6 -->
+
+            <div class="staff-card">
+
+                <img
+                    src="images/yogishdirector.jpg"
+                    alt="Sri. Yogeesh"
+                >
+
+                <h3>
+                    Sri. Yogeesh
+                </h3>
+
+                <p>
+                    Director
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         STAFF GROUP PHOTO
+    ========================= -->
+
+    <section class="staff-photo-section">
+
+        <h2>
+            Our Staff
+        </h2>
+
+
+        <p>
+            Our dedicated staff members working together
+            for the service and development of the society.
+        </p>
+
+
+        <img
+            src="images/staff-group.jpg"
+            alt="Kaipunjalu Society Staff Members"
+            class="staff-group-photo"
+        >
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kaipunjalu Fishermen's
+            Primary Multi-Purpose Co-operative Society Ltd.
+        </p>
+
+
+        <p>
+            Serving the community with trust since 1920.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

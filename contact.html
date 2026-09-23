@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Kaipunjalu Co-operative Society</title>
+
+
+    <style>
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #063b5c;
+
+            min-height: 74px;
+
+            padding: 10px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+        .brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+
+        .brand img {
+            width: 50px;
+
+            height: 50px;
+
+            object-fit: contain;
+        }
+
+
+        .brand h2 {
+            color: white;
+
+            font-size: 18px;
+
+            margin: 0;
+
+            white-space: nowrap;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .nav-links a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .header {
+            background:
+            linear-gradient(
+                rgba(6, 59, 92, 0.82),
+                rgba(6, 59, 92, 0.82)
+            ),
+            url("images/society.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            padding: 90px 20px;
+
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .header h1 {
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .header p {
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 85%;
+
+            max-width: 1100px;
+
+            margin: 50px auto;
+        }
+
+
+        .contact-area {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+        }
+
+
+        /* =========================
+           CONTACT CARDS
+        ========================= */
+
+        .contact-info,
+        .contact-form {
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.10);
+        }
+
+
+        .contact-info h2,
+        .contact-form h2 {
+            color: #063b5c;
+
+            margin-bottom: 20px;
+        }
+
+
+        .info-box {
+            margin-bottom: 22px;
+        }
+
+
+        .info-box h3 {
+            color: #087ea4;
+
+            margin-bottom: 7px;
+        }
+
+
+        .info-box p {
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           CONTACT FORM
+        ========================= */
+
+        label {
+            display: block;
+
+            margin-top: 15px;
+
+            margin-bottom: 6px;
+
+            font-weight: bold;
+        }
+
+
+        input,
+        textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 6px;
+
+            font-size: 15px;
+        }
+
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+
+            border-color: #087ea4;
+        }
+
+
+        textarea {
+            height: 120px;
+
+            resize: none;
+        }
+
+
+        button {
+            margin-top: 20px;
+
+            background-color: #063b5c;
+
+            color: white;
+
+            border: none;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            cursor: pointer;
+
+            font-size: 15px;
+        }
+
+
+        button:hover {
+            background-color: #087ea4;
+        }
+
+
+        /* =========================
+           LOCATION
+        ========================= */
+
+        .map {
+            margin-top: 30px;
+
+            background-color: #e8f3f8;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+
+        .map h2 {
+            color: #063b5c;
+
+            margin-bottom: 10px;
+        }
+
+
+        .map p {
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #063b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 50px;
+        }
+
+
+        footer p {
+            margin: 6px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+
+            .nav-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .contact-area {
+                grid-template-columns: 1fr;
+            }
+
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+
+            .brand h2 {
+                font-size: 17px;
+            }
+
+
+            .nav-links {
+                gap: 10px;
+            }
+
+
+            .nav-links a {
+                margin: 4px;
+            }
+
+
+            .container {
+                width: 92%;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 500px) {
+
+            .contact-info,
+            .contact-form {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+
+        <div class="brand">
+
+            <img
+                src="images/logo.png"
+                alt="Kaipunjalu Society Logo"
+            >
+
+
+            <h2>
+                KAIPUNJALU CO-OP
+            </h2>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <a href="services.html">
+                Services
+            </a>
+
+
+            <a href="progress.html">
+                Progress
+            </a>
+
+
+            <a href="social.html">
+                Social Work
+            </a>
+
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+
+            <a href="management.html">
+                Management
+            </a>
+
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
+
+    <div class="header">
+
+        <h1>
+            Contact Us
+        </h1>
+
+
+        <p>
+            We are here to serve our members and community
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <div class="container">
+
+
+        <div class="contact-area">
+
+
+            <!-- =========================
+                 CONTACT INFORMATION
+            ========================= -->
+
+            <div class="contact-info">
+
+                <h2>
+                    Get In Touch
+                </h2>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        📍 Head Office
+                    </h3>
+
+                    <p>
+                        Mogaveera Sankeerna,
+                        Kaipunjalu,
+                        Uliyaragoli Village,
+                        Kaup Taluk,
+                        Udupi District,
+                        Karnataka - 574106
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        📞 Phone
+                    </h3>
+
+                    <p>
+                        0820-2551631
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        📧 Email
+                    </h3>
+
+                    <p>
+                        tanushasalian884@gmail.com
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        🕘 Office
+                    </h3>
+
+                    <p>
+                        Visit the society office during
+                        working hours for assistance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CONTACT FORM
+            ========================= -->
+
+            <div class="contact-form">
+
+                <h2>
+                    Send Us a Message
+                </h2>
+
+
+                <form>
+
+                    <label>
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                    >
+
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                    >
+
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        placeholder="Enter your phone number"
+                    >
+
+
+                    <label>
+                        Message
+                    </label>
+
+                    <textarea
+                        placeholder="Enter your message"
+                    ></textarea>
+
+
+                    <button type="submit">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             LOCATION
+        ========================= -->
+
+        <div class="map">
+
+            <h2>
+                📍 Our Location
+            </h2>
+
+
+            <p>
+
+                Kaipunjalu Fishermen's Primary
+                Multi-Purpose Co-operative Society Ltd.
+
+                <br>
+
+                Mogaveera Sankeerna, Kaipunjalu,
+                Uliyaragoli Village,
+                Kaup Taluk, Udupi District,
+                Karnataka - 574106
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kaipunjalu Fishermen's
+            Primary Multi-Purpose Co-operative Society Ltd.
+        </p>
+
+
+        <p>
+            Serving the community with trust since 1920.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

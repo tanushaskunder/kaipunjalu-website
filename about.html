@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - Kaipunjalu Co-operative Society</title>
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background-color: #063b5c;
+            min-height: 74px;
+            padding: 10px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .brand h2 {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+
+        /* =========================
+           PAGE HEADER
+        ========================= */
+
+        .header {
+            background:
+            linear-gradient(
+                rgba(6, 59, 92, 0.80),
+                rgba(6, 59, 92, 0.80)
+            ),
+            url("images/society.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            padding: 90px 20px;
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 85%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+
+        /* =========================
+           COMMON CARD
+        ========================= */
+
+        .card {
+            background-color: white;
+
+            padding: 30px;
+
+            margin-bottom: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.10);
+        }
+
+        .card h2 {
+            color: #063b5c;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+
+        /* =========================
+           HISTORY
+        ========================= */
+
+        .history {
+            width: 100%;
+            margin: 30px auto;
+            padding: 35px;
+
+            background-color: white;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 5px 15px rgba(0,0,0,0.10);
+        }
+
+        .history h2 {
+            text-align: center;
+
+            color: #063b5c;
+
+            font-size: 30px;
+
+            margin-bottom: 35px;
+        }
+
+        .history-content {
+            display: grid;
+
+            grid-template-columns: 280px 1fr;
+
+            gap: 35px;
+
+            align-items: start;
+        }
+
+        /* Founder image */
+
+        .history-image {
+            text-align: center;
+
+            background-color: #f4f8fb;
+
+            padding: 20px;
+
+            border-radius: 12px;
+        }
+
+        .history-image img {
+            width: 200px;
+            height: 240px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+            margin-bottom: 15px;
+
+            border: 3px solid #063b5c;
+        }
+
+        .history-image h3 {
+            color: #063b5c;
+
+            font-size: 18px;
+
+            margin-bottom: 6px;
+        }
+
+        .history-image p {
+            color: #087ea4;
+
+            font-size: 14px;
+
+            text-align: center;
+        }
+
+        /* History text */
+
+        .history-text p {
+            color: #555;
+
+            line-height: 1.8;
+
+            margin-bottom: 18px;
+
+            text-align: justify;
+        }
+
+
+        /* =========================
+           MISSION
+        ========================= */
+
+        .mission {
+            display: flex;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .mission-box {
+            flex: 1;
+
+            min-width: 250px;
+
+            background-color: #e8f3f8;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .mission-box:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 5px 12px rgba(0,0,0,0.10);
+        }
+
+        .mission-box h3 {
+            color: #063b5c;
+
+            margin-bottom: 10px;
+        }
+
+        .mission-box p {
+            text-align: center;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #063b5c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 6px;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .history {
+                width: 100%;
+
+                padding: 25px;
+            }
+
+            .history-content {
+                grid-template-columns: 1fr;
+            }
+
+            .history-image {
+                max-width: 300px;
+
+                margin: auto;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                margin: 4px;
+            }
+
+            .header {
+                padding: 70px 15px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+
+            .header p {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="brand">
+
+            <img
+                src="images/logo.png"
+                alt="Kaipunjalu Society Logo"
+            >
+
+            <h2>
+                KAIPUNJALU CO-OP
+            </h2>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="services.html">Services</a>
+
+            <a href="progress.html">Progress</a>
+
+            <a href="social.html">Social Work</a>
+
+            <a href="achievements.html">Achievements</a>
+
+            <a href="management.html">Management</a>
+
+            <a href="gallery.html">Gallery</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================= -->
+
+    <div class="header">
+
+        <h1>
+            About Our Society
+        </h1>
+
+        <p>
+            A journey of trust, cooperation and service since 1920
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <div class="container">
+
+
+        <!-- =========================
+             WHO WE ARE
+        ========================= -->
+
+        <div class="card">
+
+            <h2>
+                Who We Are
+            </h2>
+
+            <p>
+
+                The Kaipunjalu Fishermen's Primary
+                Multi-Purpose Co-operative Society
+                was established in the year
+                <b>1920</b>.
+
+                <br><br>
+
+                The society was founded with the aim
+                of bringing fishermen to the forefront
+                of society and empowering them
+                economically.
+
+                <br><br>
+
+                Over the years, the society has grown
+                into a strong institution serving the
+                coastal and rural fishing communities.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             HISTORY OF THE SOCIETY
+        ========================= -->
+
+        <section class="history">
+
+            <h2>
+                📜 History of the Society
+            </h2>
+
+
+            <div class="history-content">
+
+
+                <!-- FOUNDER IMAGE -->
+
+                <div class="history-image">
+
+                    <img
+                        src="images/chennappa-sahukar.jpg"
+                        alt="Shri Chennappa Sahukar"
+                    >
+
+                    <h3>
+                        Shri Chennappa Sahukar
+                    </h3>
+
+                    <p>
+                        Founder and Leader of the Society
+                    </p>
+
+                </div>
+
+
+
+                <!-- HISTORY TEXT -->
+
+                <div class="history-text">
+
+                    <p>
+
+                        The society was established in the
+                        year <b>1920</b> during the rule of
+                        the Madras Province, under the
+                        leadership of <b>Shri Chennappa
+                        Sahukar</b> in the village of
+                        Kaipunjal.
+
+                    </p>
+
+
+                    <p>
+
+                        Initially operating with limited
+                        infrastructure, the society primarily
+                        engaged in the supply and distribution
+                        of fishing nets, threads, and other
+                        fishing equipment to local fishermen
+                        until <b>1999</b>. Due to its narrow
+                        scope of operations, the growth of
+                        the society remained limited during
+                        that period.
+
+                    </p>
+
+
+                    <p>
+
+                        However, in the early 2000s, under
+                        the leadership of <b>Shri Janardhan
+                        Salyan</b> as President, and with
+                        the support of a capable administrative
+                        committee comprising <b>Shri Sudharma
+                        Shriyan, Giriraj R., Chandrashekar
+                        Kundar, Yogish Kanchan, Pushpa
+                        Shriyan, and Pushpalatha R. Kotian</b>,
+                        the society was given a new direction.
+
+                    </p>
+
+
+                    <p>
+
+                        With the selfless service and efficient
+                        management of the Chief Executive
+                        Officer, <b>Shri Jagadish Thingalaya</b>,
+                        the society began to achieve remarkable
+                        progress.
+
+                    </p>
+
+
+                    <p>
+
+                        In the years that followed, the
+                        dedicated service of the administrative
+                        committee further elevated the
+                        society's status within the
+                        cooperative sector.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MISSION
+        ========================= -->
+
+        <div class="card">
+
+            <h2>
+                Our Mission
+            </h2>
+
+
+            <div class="mission">
+
+
+                <div class="mission-box">
+
+                    <h3>
+                        🤝 Cooperation
+                    </h3>
+
+                    <p>
+                        Building trust and cooperation
+                        among members.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-box">
+
+                    <h3>
+                        🌊 Community
+                    </h3>
+
+                    <p>
+                        Supporting the development
+                        of coastal communities.
+                    </p>
+
+                </div>
+
+
+                <div class="mission-box">
+
+                    <h3>
+                        📈 Growth
+                    </h3>
+
+                    <p>
+                        Helping members achieve
+                        economic development.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             GROWTH
+        ========================= -->
+
+        <div class="card">
+
+            <h2>
+                Our Growth
+            </h2>
+
+            <p>
+
+                Through dedicated service and
+                responsible management, the society
+                has grown significantly.
+
+                <br><br>
+
+                As of <b>31 March 2026</b>, the society
+                has <b>2,504 members</b> and yearly
+                transactions of <b>₹214.69 crore</b>.
+
+                <br><br>
+
+                The society also operates a fully
+                computerized administrative office
+                and continues to develop its facilities
+                for the benefit of its members.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Kaipunjalu Fishermen's
+            Primary Multi-Purpose Co-operative
+            Society Ltd.
+        </p>
+
+        <p>
+            Serving the community with trust since 1920.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
